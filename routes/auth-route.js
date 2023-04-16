@@ -4,5 +4,8 @@ const router = express.Router();
 
 
 
-router.route("/api/auth/register")
-    .post(register)
+router.route('/api/auth/register')
+    .post(register);
+
+
+module.exports = router;

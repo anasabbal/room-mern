@@ -1,7 +1,7 @@
+const authService = {};
 
 
-
-const register = async (req) => {
+authService.register = async (user) => {
     try {
         let response = await fetch('http://localhost:3001/v1/api/auth/register', {
             method: 'POST',
@@ -9,8 +9,8 @@ const register = async (req) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(req)
-        });
+            body: JSON.stringify(user)
+        })
         console.log(response);
         return await response.json();
     }catch (err){
@@ -19,5 +19,5 @@ const register = async (req) => {
 }
 
 module.exports = {
-    register
-}
+    authService
+};
