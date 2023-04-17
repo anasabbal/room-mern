@@ -36,9 +36,9 @@ export default function Register () {
     }
 
     return (
-        <FlexGrid justifyContent="center" alignItems="center" height="100vh" >
+        <FlexGrid justifyContent="center" alignItems="center">
             <FlexGridItem>
-                <form onSubmit={clickSubmit} className={css({ width: '400px' })}>
+                <form onSubmit={clickSubmit} className={css({ width: '400px' ,justifyContent: 'center', alignItems: "center"})}>
                     <FormControl label="Name">
                         <Input
                             type="name"

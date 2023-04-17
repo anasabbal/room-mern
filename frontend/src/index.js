@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BaseProvider, LightTheme} from 'baseui';
+import {BaseProvider, LightTheme, DarkTheme} from 'baseui';
 import { Provider } from "styletron-react";
 import { Client } from "styletron-engine-atomic";
 
@@ -13,7 +13,7 @@ const engine = new Client();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider value={engine}>
-        <BaseProvider theme={LightTheme}>
+        <BaseProvider theme={DarkTheme}>
             <App />
         </BaseProvider>
     </Provider>
